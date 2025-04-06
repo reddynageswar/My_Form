@@ -12,21 +12,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo "🔧 Running build steps..."
-                sh 'echo "Build successful!"'
+                sh 'echo "Build successful!"' // Replace with actual build command
             }
         }
 
         stage('Test') {
             steps {
                 echo "✅ Running tests..."
-                sh 'echo "All tests passed!"'
+                sh 'echo "All tests passed!"' // Replace with actual test command
             }
         }
 
         stage('Deploy') {
             steps {
                 echo "🚀 Deploying application..."
-                sh 'echo "Deployed successfully!"'
+                sh 'echo "Deployed successfully!"' // Replace with actual deployment command
             }
         }
     }
@@ -37,6 +37,6 @@ pipeline {
         }
         failure {
             echo "❌ Pipeline failed!"
-        }
-    }
+        }
+    }
 }

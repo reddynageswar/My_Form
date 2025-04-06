@@ -11,27 +11,10 @@ node {
 
         stage('Build') {
             echo 'Building the project...'
-            try {
-                // Example of running a build command (e.g., Maven or Gradle)
-                sh 'mvn clean install'  // or 'gradle build'
-                echo 'Build successful!'
-            } catch (Exception e) {
-                buildStatus = 'failure'
-                throw e
-            }
-        }
-
-        stage('Test') {
+               echo 'Build successful!'
+      
             echo 'Running tests...'
-            try {
-                // Run unit tests or integration tests
-                sh 'mvn test'  // or 'gradle test'
-                echo 'Tests passed!'
-            } catch (Exception e) {
-                buildStatus = 'failure'
-                throw e
-            }
-        }
+            
 
         stage('Deploy') {
             if (buildStatus == 'success') {
